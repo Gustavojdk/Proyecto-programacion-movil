@@ -11,15 +11,29 @@
         <aside class="bg-dark text-white p-3" style="width: 250px;">
             <h5 class="mb-4">Trufis Admin</h5>
             <nav class="nav flex-column">
-                <a class="nav-link text-white p-0 mb-2" href="{{ route('admin.dashboard') }}">Dashboard</a>
+                <a
+                    class="nav-link p-0 mb-2 {{ request()->routeIs('admin.dashboard') ? 'text-white fw-semibold' : 'text-white-50' }}"
+                    href="{{ route('admin.dashboard') }}"
+                >
+                    Dashboard
+                </a>
                 <a class="nav-link text-white-50 p-0 mb-2" href="#">Usuarios</a>
                 <a class="nav-link text-white-50 p-0" href="#">Reportes</a>
             </nav>
         </aside>
 
         <main class="flex-grow-1">
-            <header class="bg-white border-bottom px-4 py-3">
+            <header class="bg-white border-bottom px-4 py-3 d-flex align-items-center justify-content-between">
                 <h1 class="h4 m-0">@yield('page_title', 'Dashboard')</h1>
+                <div class="d-flex align-items-center gap-3">
+                    <span class="text-muted small">
+                        {{ auth()->user()->name }} ({{ auth()->user()->rol }})
+                    </span>
+                    <form method="POST" action="{{ route('admin.logout') }}">
+                        @csrf
+                        <button class="btn btn-sm btn-outline-secondary" type="submit">Cerrar sesión</button>
+                    </form>
+                </div>
             </header>
             <section class="p-4">
                 @yield('content')

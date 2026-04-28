@@ -9,23 +9,23 @@
             <div class="card border-0 shadow-sm">
                 <div class="card-body">
                     <h2 class="h6 text-muted mb-2">Usuarios activos</h2>
-                    <p class="h3 mb-0">120</p>
+                    <p class="h3 mb-0">{{ $stats['usuarios_activos'] }}</p>
                 </div>
             </div>
         </div>
         <div class="col-md-4">
             <div class="card border-0 shadow-sm">
                 <div class="card-body">
-                    <h2 class="h6 text-muted mb-2">Pedidos hoy</h2>
-                    <p class="h3 mb-0">34</p>
+                    <h2 class="h6 text-muted mb-2">Sindicatos registrados</h2>
+                    <p class="h3 mb-0">{{ $stats['sindicatos'] }}</p>
                 </div>
             </div>
         </div>
         <div class="col-md-4">
             <div class="card border-0 shadow-sm">
                 <div class="card-body">
-                    <h2 class="h6 text-muted mb-2">Incidencias</h2>
-                    <p class="h3 mb-0">2</p>
+                    <h2 class="h6 text-muted mb-2">Trufis registrados</h2>
+                    <p class="h3 mb-0">{{ $stats['trufis'] }}</p>
                 </div>
             </div>
         </div>

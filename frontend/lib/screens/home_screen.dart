@@ -1,3 +1,10 @@
-//aqui se hara lo que es el home screen, que es la pantalla
-//principal de la aplicacion, donde se mostrara el
-//mapa y las rutas disponibles
+// En lib/main.dart, antes de MyApp, agrega:
+class HomeScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('Home')),
+      body: Center(child: Text('Pantalla de Inicio')),
+    );
+  }
+}

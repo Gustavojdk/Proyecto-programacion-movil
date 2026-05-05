@@ -41,4 +41,6 @@ flutter:
   
   assets:
     - assets/images/    # Asegúrate de que las imágenes estén en la carpeta correcta
+    #- assets/geojson/colcapirhua.geojson  # Para que las imágenes funcionen
+
   generate: true
